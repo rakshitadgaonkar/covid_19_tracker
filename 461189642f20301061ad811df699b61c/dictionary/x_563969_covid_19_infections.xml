@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Infections" max_length="40" name="x_563969_covid_19_infections" type="collection">
+        <element label="Confirmed" max_length="40" name="confirmed" type="integer"/>
+        <element label="ConfirmedForeignNational" max_length="40" name="confirmedforeignnational" type="integer"/>
+        <element label="ConfirmedIndianNational" max_length="40" name="confirmedindiannational" type="integer"/>
+        <element label="Cured" max_length="40" name="cured" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Date" max_length="40" name="date" type="glide_date"/>
+        <element label="Deaths" max_length="40" name="deaths" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Sno" max_length="40" name="sno" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="State/UnionTerritory" max_length="40" name="state_unionterritory" type="string"/>
+        <element label="Time" max_length="40" name="time" type="glide_time"/>
+    </element>
+</database>

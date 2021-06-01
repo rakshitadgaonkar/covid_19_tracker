@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Covid 19 1622556489943" max_length="40" name="x_563969_covid_19_1622556489943" type="collection">
+        <element attributes="import_attribute_name=18-30 years (Age)" label="18-30 years (Age)" max_length="40" name="u_18_30_years__age_" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=30-45 years (Age)" label="30-45 years (Age)" max_length="40" name="u_30_45_years__age_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=45-60 years (Age)" label="45-60 years (Age)" max_length="40" name="u_45_60_years__age_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=60+ years (Age)" label="60+ years (Age)" max_length="40" name="u_60__years__age_" type="string"/>
+        <element attributes="import_attribute_name=AEFI" label="AEFI" max_length="40" name="u_aefi" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Female(Individuals Vaccinated)" label="Female(Individuals Vaccinated)" max_length="40" name="u_female_indiv_ls_vaccinated_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=First Dose Administered" label="First Dose Administered" max_length="40" name="u_first_dose_administered" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Male(Individuals Vaccinated)" label="Male(Individuals Vaccinated)" max_length="40" name="u_male_individuals_vaccinated_" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Second Dose Administered" label="Second Dose Administered" max_length="40" name="u_second_dose_administered" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=State" label="State" max_length="40" name="u_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Total Covaxin Administered" label="Total Covaxin Administered" max_length="40" name="u_total_covaxin_administered" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Total CoviShield Administered" label="Total CoviShield Administered" max_length="40" name="u_total_covish_d_administered" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Total Doses Administered" label="Total Doses Administered" max_length="40" name="u_total_doses_administered" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Total Individuals Vaccinated" label="Total Individuals Vaccinated" max_length="40" name="u_total_individuals_vaccinated" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Total Sessions Conducted" label="Total Sessions Conducted" max_length="40" name="u_total_sessions_conducted" type="string"/>
+        <element attributes="import_attribute_name=Total Sites" label="Total Sites " max_length="40" name="u_total_sites" type="integer"/>
+        <element attributes="import_attribute_name=Transgender(Individuals Vaccinated)" label="Transgender(Individuals Vaccinated)" max_length="40" name="u_transgender__ls_vaccinated_" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Updated On" label="Updated On" max_length="40" name="u_updated_on" type="glide_date"/>
+    </element>
+</database>

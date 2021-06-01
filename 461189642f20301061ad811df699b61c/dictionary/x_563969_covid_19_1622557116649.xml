@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="Covid 19 1622557116649" max_length="40" name="x_563969_covid_19_1622557116649" type="collection">
+        <element attributes="import_attribute_name=Confirmed" label="Confirmed" max_length="40" name="u_confirmed" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ConfirmedForeignNational" label="ConfirmedForeignNational" max_length="40" name="u_confirmedforeignnational" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=ConfirmedIndianNational" label="ConfirmedIndianNational" max_length="40" name="u_confirmedindiannational" type="string"/>
+        <element attributes="import_attribute_name=Cured" label="Cured" max_length="40" name="u_cured" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Date" label="Date" max_length="40" name="u_date" type="glide_date"/>
+        <element attributes="import_attribute_name=Deaths" label="Deaths" max_length="40" name="u_deaths" type="integer"/>
+        <element attributes="import_attribute_name=Sno" label="Sno" max_length="40" name="u_sno" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=State/UnionTerritory" label="State/UnionTerritory" max_length="40" name="u_state_unionterritory" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Time" label="Time" max_length="40" name="u_time" type="glide_date_time"/>
+    </element>
+</database>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Vaccinations" max_length="40" name="x_563969_covid_19_vaccinations" type="collection">
+        <element label="AEFI" max_length="40" name="aefi" type="integer"/>
+        <element label="Female(Individuals Vaccinated)" max_length="40" name="female_individuals_vaccinated" type="integer"/>
+        <element label="First Dose Administered" max_length="40" name="first_dose_administered" type="integer"/>
+        <element label="Male(Individuals Vaccinated)" max_length="40" name="male_individuals_vaccinated" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Second Dose Administered" max_length="40" name="second_dose_administered" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="State" max_length="40" name="state" type="string"/>
+        <element label="Total Covaxin Administered" max_length="40" name="total_covaxin_administered" type="integer"/>
+        <element label="Total CoviShield Administered" max_length="40" name="total_covishield_administered" type="integer"/>
+        <element label="Total Doses Administered" max_length="40" name="total_doses_administered" type="integer"/>
+        <element label="Total Individuals Vaccinated" max_length="40" name="total_individuals_vaccinated" type="integer"/>
+        <element label="Total Sessions Conducted" max_length="40" name="total_sessions_conducted" type="integer"/>
+        <element label="Total Sites " max_length="40" name="total_sites" type="integer"/>
+        <element label="Transgender(Individuals Vaccinated)" max_length="40" name="transgender_individuals_vaccinated" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Updated On" max_length="40" name="updated_on" type="glide_date"/>
+        <element label="18-30 years (Age)" max_length="40" name="u_18_30_years_age" type="integer"/>
+        <element label="30-45 years (Age)" max_length="40" name="u_30_45_years_age" type="integer"/>
+        <element label="45-60 years (Age)" max_length="40" name="u_45_60_years_age" type="integer"/>
+        <element label="60+ years (Age)" max_length="40" name="u_60_years_age" type="integer"/>
+    </element>
+</database>
