@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 02:00:00</entered_time>
+        <name>Covid_19_Infections</name>
+        <offset/>
+        <offset_type/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2021-06-08 16:50:00</run_start>
+        <run_time>1970-01-01 03:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var request = new sn_ws.RESTMessageV2();
+request.setEndpoint('https://api.covid19india.org/data.json');
+request.setHttpMethod('GET');
+
+//Eg. UserName="admin", Password="admin" for this code sample.
+//var user = 'admin';
+//var password = 'admin';
+
+//request.setBasicAuth(user,password);
+request.setRequestHeader("Accept","application/json");
+
+var response = request.execute();
+//gs.info(response.getBody());
+
+var response_json = response.getBody();
+
+//var response_str = JSON.stringify(response_json);
+
+var json_data = JSON.parse(response_json);
+
+for(i = 1 ; i < json_data.statewise.length ; i++){
+
+var statewise= json_data.statewise[i];
+
+var gr = new GlideRecord('incident');
+
+gr.initialize();
+
+gr.confirmed = statewise.confirmed;
+gr.state_unionterritory = statewise.state;
+gr.date = statewise.lastupdatedtime;
+gr.cured = statewise.recovered;
+gr.deaths = statewise.deaths;
+gr.insert();
+
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-08 16:51:28</sys_created_on>
+        <sys_id>9c1aedba2f28b01061ad811df699b639</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Covid_19_Infections</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>sysauto_script_9c1aedba2f28b01061ad811df699b639</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-12 08:41:00</sys_updated_on>
+        <time_zone>GMT</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

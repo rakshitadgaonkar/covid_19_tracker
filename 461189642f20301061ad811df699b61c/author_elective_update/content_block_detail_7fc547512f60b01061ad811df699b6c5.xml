@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_block_detail">
+    <content_block_detail action="DELETE">
+        <active>true</active>
+        <category>kb</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <model_id/>
+        <model_table/>
+        <name>stage 3</name>
+        <script/>
+        <sys_class_name>content_block_detail</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-04 07:40:09</sys_created_on>
+        <sys_id>7fc547512f60b01061ad811df699b6c5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>stage 3</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>content_block_detail_7fc547512f60b01061ad811df699b6c5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 07:41:11</sys_updated_on>
+        <type>page</type>
+    </content_block_detail>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</application>
+        <file_path/>
+        <instance_id>9fe459e7db4f7bc40ae3ac44d49619e6</instance_id>
+        <instance_name>dev91329</instance_name>
+        <name>content_block_detail_7fc547512f60b01061ad811df699b6c5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="content_block_detail"><content_block_detail action="INSERT_OR_UPDATE"><active>true</active><category>kb</category><condition/><conditional>false</conditional><frame/><logged_on>false</logged_on><model_id/><model_table/><name>stage 3</name><script/><sys_class_name>content_block_detail</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-04 07:40:09</sys_created_on><sys_id>7fc547512f60b01061ad811df699b6c5</sys_id><sys_mod_count>1</sys_mod_count><sys_name>stage 3</sys_name><sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package><sys_policy/><sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope><sys_update_name>content_block_detail_7fc547512f60b01061ad811df699b6c5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-04 07:41:11</sys_updated_on><type>page</type></content_block_detail></record_update>]]></payload>
+        <payload_hash>-120616345</payload_hash>
+        <record_name>stage 3</record_name>
+        <reverted_from/>
+        <source>9554d5a02f60301061ad811df699b6f4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-04 07:41:11</sys_created_on>
+        <sys_id>7d1687512f60b01061ad811df699b634</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179d5f8032c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 07:41:11</sys_updated_on>
+        <type>Detailed Content</type>
+        <update_guid>b5168751fc60b0108fee7c6ec237e034</update_guid>
+        <update_guid_history>b5168751fc60b0108fee7c6ec237e034:-120616345,32d507513160b010778e72519a85e06d:-256405168</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="stage 3">b6a94f152f60b01061ad811df699b687</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-04 07:56:49</sys_created_on>
+        <sys_db_object display_value="" name="content_block_detail">content_block_detail</sys_db_object>
+        <sys_id>023f7a09257746a88cf4a2c914ce7090</sys_id>
+        <sys_metadata>7fc547512f60b01061ad811df699b6c5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>stage 3</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_scope_delete display_value="">48faad04c57d4bb9995aadcb05bbb521</sys_scope_delete>
+        <sys_update_name>content_block_detail_7fc547512f60b01061ad811df699b6c5</sys_update_name>
+        <sys_update_version display_value="content_block_detail_7fc547512f60b01061ad811df699b6c5">7d1687512f60b01061ad811df699b634</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 07:56:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

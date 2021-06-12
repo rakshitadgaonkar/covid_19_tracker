@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Testing" max_length="40" name="x_563969_covid_19_testing" type="collection">
+    <element label="Testing" max_length="40" name="x_563969_covid_19_testing" sizeclass="13403" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Date" max_length="40" name="date" type="glide_date"/>
         <element label="Negative" max_length="40" name="negative" type="integer"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>

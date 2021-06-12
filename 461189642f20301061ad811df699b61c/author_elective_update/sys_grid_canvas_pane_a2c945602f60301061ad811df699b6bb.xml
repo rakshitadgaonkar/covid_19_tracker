@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="DELETE">
+        <grid_canvas display_value="PA Covid - 19 Tracker - New Tab">44e8c5202f60301061ad811df699b6e7</grid_canvas>
+        <height>18</height>
+        <portal_widget display_value="Created 2021-06-01 07:42:40">a2c945602f60301061ad811df699b6b6</portal_widget>
+        <posx>6</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-01 14:42:40</sys_created_on>
+        <sys_id>a2c945602f60301061ad811df699b6bb</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>44e8c5202f60301061ad811df699b6e7</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_a2c945602f60301061ad811df699b6bb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 13:00:40</sys_updated_on>
+        <width>6</width>
+    </sys_grid_canvas_pane>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</application>
+        <file_path/>
+        <instance_id>9fe459e7db4f7bc40ae3ac44d49619e6</instance_id>
+        <instance_name>dev91329</instance_name>
+        <name>sys_grid_canvas_pane_a2c945602f60301061ad811df699b6bb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane"><sys_grid_canvas_pane action="INSERT_OR_UPDATE"><grid_canvas display_value="PA Covid - 19 Tracker - New Tab">44e8c5202f60301061ad811df699b6e7</grid_canvas><height>18</height><portal_widget display_value="Created 2021-06-01 07:42:40">a2c945602f60301061ad811df699b6b6</portal_widget><posx>6</posx><posy>0</posy><sys_class_name>sys_grid_canvas_pane</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-06-01 14:42:40</sys_created_on><sys_id>a2c945602f60301061ad811df699b6bb</sys_id><sys_mod_count>7</sys_mod_count><sys_name>44e8c5202f60301061ad811df699b6e7</sys_name><sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package><sys_policy/><sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope><sys_update_name>sys_grid_canvas_pane_a2c945602f60301061ad811df699b6bb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-06-07 13:00:40</sys_updated_on><width>6</width></sys_grid_canvas_pane></record_update>]]></payload>
+        <payload_hash>-601005231</payload_hash>
+        <record_name>44e8c5202f60301061ad811df699b6e7</record_name>
+        <reverted_from/>
+        <source>9554d5a02f60301061ad811df699b6f4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 13:00:40</sys_created_on>
+        <sys_id>cffb6f5e2f24701061ad811df699b635</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179e68f96f70000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 13:00:40</sys_updated_on>
+        <type>Grid Canvas Pane</type>
+        <update_guid>0bfb6f5e4024701026123c0c4db1d835</update_guid>
+        <update_guid_history>0bfb6f5e4024701026123c0c4db1d835:-601005231,1efb239ea824701059c6d6b9d0bc7f5f:1771580665,d5fb239e8624701036c70b01a649c0d8:-945267563,60fbe79e5e247010ee3897df0aec99d7:-1361910767,c0fb279e1d247010f737ab9ce0aea3a5:-1169084007,a6eb279eec24701003b7e790699a57e3:-601005231,a22a496013603010aac9c0d6fca48994:171908659,f2c9456059603010664831606df3d4bc:1168971002</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 15:56:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_grid_canvas_pane">sys_grid_canvas_pane</sys_db_object>
+        <sys_id>a57484fd306f41328f156ee2a901a541</sys_id>
+        <sys_metadata>a2c945602f60301061ad811df699b6bb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>44e8c5202f60301061ad811df699b6e7</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_scope_delete display_value="">48faad04c57d4bb9995aadcb05bbb521</sys_scope_delete>
+        <sys_update_name>sys_grid_canvas_pane_a2c945602f60301061ad811df699b6bb</sys_update_name>
+        <sys_update_version display_value="sys_grid_canvas_pane_a2c945602f60301061ad811df699b6bb">cffb6f5e2f24701061ad811df699b635</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 15:56:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <auto_resolution_enabled>false</auto_resolution_enabled>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description/>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.31",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "6c5de9ab018f4ae68856d669313673aa": {
+          "id": "6c5de9ab018f4ae68856d669313673aa",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi , how can I help you ?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "efa9e948bc0e4d0abcd0b20ec83d8389": {
+          "id": "efa9e948bc0e4d0abcd0b20ec83d8389",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "575e72a038804369b04c0e2114fe0ab3": {
+          "id": "575e72a038804369b04c0e2114fe0ab3",
+          "stepType": "Prompt",
+          "name": "user_input",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please enter your query"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "ddd04cc2c9b6422f82f672e1f7d2aba9",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "4d5c7011787048c288184c7130835b47": {
+          "id": "4d5c7011787048c288184c7130835b47",
+          "stepType": "LinkOutput",
+          "name": "knowledge_output",
+          "url": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "https://dev91329.service-now.com/kb_view.do?sysparm_article=KB0010004"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "label": {
+            "mode": "simple",
+            "value": ""
+          },
+          "header": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Precautions"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "linkType": "single",
+          "introMsg": {
+            "mode": "simple",
+            "value": ""
+          },
+          "listOfLinks": ""
+        }
+      },
+      "edges": [
+        {
+          "id": "e8fe726002bb4336ab2ab2442b9dd4e9",
+          "edgeType": "Edge",
+          "source": "6c5de9ab018f4ae68856d669313673aa",
+          "target": "575e72a038804369b04c0e2114fe0ab3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "cc06a624f0d94b948071729f606791ad",
+          "edgeType": "Edge",
+          "source": "575e72a038804369b04c0e2114fe0ab3",
+          "target": "4d5c7011787048c288184c7130835b47",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1e40fbbf11b342bb8dd9870ff48ab4fa",
+          "edgeType": "Edge",
+          "source": "4d5c7011787048c288184c7130835b47",
+          "target": "efa9e948bc0e4d0abcd0b20ec83d8389",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "ddd04cc2c9b6422f82f672e1f7d2aba9": {
+      "id": "ddd04cc2c9b6422f82f672e1f7d2aba9",
+      "name": "user_input",
+      "label": "User_input",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTYyMzA3MzQyMjUwMyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    }
+  }
+}</graph>
+        <key_phrases>Covid-19 Agent,covid-19,covid,coronavirus</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <name>Covid-19 Agent</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <roles/>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 13:41:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>935533de2f64701061ad811df699b6b5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Covid-19 Agent</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>sys_cb_topic_935533de2f64701061ad811df699b6b5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 13:50:50</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=935533de2f64701061ad811df699b6b5"/>
+</record_update>

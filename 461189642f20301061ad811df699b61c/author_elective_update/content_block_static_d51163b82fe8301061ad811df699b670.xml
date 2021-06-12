@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_block_static">
+    <content_block_static action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>Information</name>
+        <static_content><![CDATA[<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">The goverment of India has opened up the COVID-19 Vaccination for all the citizen from 18 to 44 years of age and made it compulsory for Indian citizen.</span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">     Steps to register for a COVID-19 vaccine :</span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">1. Register Yourself - Register using your Mobile no. or Aadhaar no. or any other Identity docs.         </span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">2. Choose Covid-19 Vaccine Location - Select your nearby Covid-19 Vaccine Center for vaccination</span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">3. Confirm Your Slot - Book your slot to Get Covid-19 Vaccine.</span></p>]]></static_content>
+        <sys_class_name>content_block_static</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-02 20:23:49</sys_created_on>
+        <sys_id>d51163b82fe8301061ad811df699b670</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Information</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>content_block_static_d51163b82fe8301061ad811df699b670</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 06:03:25</sys_updated_on>
+    </content_block_static>
+    <sys_translated_text action="DELETE" query="documentkey=d51163b82fe8301061ad811df699b670"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</application>
+        <file_path/>
+        <instance_id>9fe459e7db4f7bc40ae3ac44d49619e6</instance_id>
+        <instance_name>dev91329</instance_name>
+        <name>content_block_static_d51163b82fe8301061ad811df699b670</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="content_block_static"&gt;&lt;content_block_static action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;condition/&gt;&lt;conditional&gt;false&lt;/conditional&gt;&lt;frame/&gt;&lt;logged_on&gt;false&lt;/logged_on&gt;&lt;name&gt;Information&lt;/name&gt;&lt;static_content&gt;&lt;![CDATA[&lt;p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"&gt;&lt;span style="line-height: 115%;"&gt;The goverment of India has opened up the COVID-19 Vaccination for all the citizen from 18 to 44 years of age and made it compulsory for Indian citizen.&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"&gt;&lt;span style="line-height: 115%;"&gt;     Steps to register for a COVID-19 vaccine :&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"&gt;&lt;span style="line-height: 115%;"&gt;1. Register Yourself - Register using your Mobile no. or Aadhaar no. or any other Identity docs.         &lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"&gt;&lt;span style="line-height: 115%;"&gt;2. Choose Covid-19 Vaccine Location - Select your nearby Covid-19 Vaccine Center for vaccination&lt;/span&gt;&lt;/p&gt;
+&lt;p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"&gt;&lt;span style="line-height: 115%;"&gt;3. Confirm Your Slot - Book your slot to Get Covid-19 Vaccine.&lt;/span&gt;&lt;/p&gt;]]&gt;&lt;/static_content&gt;&lt;sys_class_name&gt;content_block_static&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-06-02 20:23:49&lt;/sys_created_on&gt;&lt;sys_id&gt;d51163b82fe8301061ad811df699b670&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;Information&lt;/sys_name&gt;&lt;sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19"&gt;461189642f20301061ad811df699b61c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Covid-19 Infections and Vaccination Tracker"&gt;461189642f20301061ad811df699b61c&lt;/sys_scope&gt;&lt;sys_update_name&gt;content_block_static_d51163b82fe8301061ad811df699b670&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-06-04 06:03:25&lt;/sys_updated_on&gt;&lt;/content_block_static&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=d51163b82fe8301061ad811df699b670"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>430190509</payload_hash>
+        <record_name>Information</record_name>
+        <reverted_from/>
+        <source>9554d5a02f60301061ad811df699b6f4</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-04 06:03:25</sys_created_on>
+        <sys_id>b5bfaedd2fec701061ad811df699b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>179d59e83450000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 06:03:25</sys_updated_on>
+        <type>Static Content</type>
+        <update_guid>fdbfaeddf3ec70108db0a951940c0227</update_guid>
+        <update_guid_history>fdbfaeddf3ec70108db0a951940c0227:430190509,e36f2edd1bec7010f9ee8489de9e8fe3:-1566426743,fa3fa6dd12ec701058f569c45130307b:1407851396,bffe22dd66ec701063c4281a5a3b2a45:634049429,5aaea25d26ec7010da233682e48cc174:1407851396,ab1dea5d61ec7010f47e4acd376c187a:-1585734068,a5fcea5de1ec7010cb4f96e761b3b376:634049429,c19ad74d28a47010c5e1357ba5768647:-1143587159,6904ab3cc8e83010800418fc08412fa2:2104234904,29222bf8b0e83010b04fa718345c0cfc:-1436782001,67b1e3f885e83010a37d866bd46699f1:-433083396,397123f8bee8301031e62c7049b776ba:-276946408</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Information">4650f2112f20b01061ad811df699b6c2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-04 06:06:10</sys_created_on>
+        <sys_db_object display_value="" name="content_block_static">content_block_static</sys_db_object>
+        <sys_id>06256013e51f4ae488cc268baf0c9964</sys_id>
+        <sys_metadata>d51163b82fe8301061ad811df699b670</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Information</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_scope_delete display_value="">48faad04c57d4bb9995aadcb05bbb521</sys_scope_delete>
+        <sys_update_name>content_block_static_d51163b82fe8301061ad811df699b670</sys_update_name>
+        <sys_update_version display_value="content_block_static_d51163b82fe8301061ad811df699b670">b5bfaedd2fec701061ad811df699b628</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 06:06:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

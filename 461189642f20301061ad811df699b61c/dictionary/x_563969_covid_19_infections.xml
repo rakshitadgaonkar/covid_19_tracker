@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Infections" max_length="40" name="x_563969_covid_19_infections" type="collection">
+    <element label="Infections" max_length="40" name="x_563969_covid_19_infections" sizeclass="15086" type="collection">
         <element label="Confirmed" max_length="40" name="confirmed" type="integer"/>
         <element label="ConfirmedForeignNational" max_length="40" name="confirmedforeignnational" type="integer"/>
         <element label="ConfirmedIndianNational" max_length="40" name="confirmedindiannational" type="integer"/>

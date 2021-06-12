@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Vaccinations" max_length="40" name="x_563969_covid_19_vaccinations" type="collection">
+    <element label="Vaccinations" max_length="40" name="x_563969_covid_19_vaccinations" sizeclass="4589" type="collection">
         <element label="AEFI" max_length="40" name="aefi" type="integer"/>
         <element label="Female(Individuals Vaccinated)" max_length="40" name="female_individuals_vaccinated" type="integer"/>
         <element label="First Dose Administered" max_length="40" name="first_dose_administered" type="integer"/>

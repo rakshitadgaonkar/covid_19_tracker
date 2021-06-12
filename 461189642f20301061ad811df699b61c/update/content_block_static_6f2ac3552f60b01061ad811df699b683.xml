@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_block_static">
+    <content_block_static action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>OTHER TIPS</name>
+        <static_content><![CDATA[<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><strong><span style="line-height: 115%; font-size: 14pt;">   <span style="text-decoration: underline;">Other Tips</span></span></strong></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">1. Keep checking and refreshing the Co-Win portal.</span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">2. The best time to look for a vaccination slot is reportedly 6 pm to 11 pm. </span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">3. Those lucky in finding a slot must not waste time in booking the slots, as the slots get filled up fast.</span></p>
+<p style="margin: 0cm 0cm 10pt; line-height: 115%; font-size: 11pt; font-family: Calibri, sans-serif;"><span style="line-height: 115%;">4. Being open to travelling for vaccination jab. In case you do not find a vaccination centre within your Pincode or district, check    nearby districts to book a slot.</span></p>]]></static_content>
+        <sys_class_name>content_block_static</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-04 07:59:32</sys_created_on>
+        <sys_id>6f2ac3552f60b01061ad811df699b683</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>OTHER TIPS</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>content_block_static_6f2ac3552f60b01061ad811df699b683</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 11:41:32</sys_updated_on>
+    </content_block_static>
+    <sys_translated_text action="delete_multiple" query="documentkey=6f2ac3552f60b01061ad811df699b683"/>
+</record_update>

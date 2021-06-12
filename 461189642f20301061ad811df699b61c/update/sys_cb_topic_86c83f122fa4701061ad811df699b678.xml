@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <auto_resolution_enabled>false</auto_resolution_enabled>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <description>Returns results from knowledge articles, service catalog items, attachments to cases and other sources.</description>
+        <flexible_conversation_switching>true</flexible_conversation_switching>
+        <graph>{
+  "graph_api_version": "1.0.31",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "Topic block for Contextual Search",
+      "nodes": {
+        "702a2771e02a4afd9549752471595c95": {
+          "id": "702a2771e02a4afd9549752471595c95",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi ,we are happy to help you with covid-19 information. "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "parameters": [
+            {
+              "name": "context",
+              "value": "",
+              "id": "a377e53b410c4f3082354c2278c11b25",
+              "referenced": true,
+              "disabled": false,
+              "checked": true
+            },
+            {
+              "name": "query",
+              "value": "",
+              "id": "d593f67867b744b0b2efcd882c39cc29",
+              "referenced": true,
+              "disabled": false,
+              "checked": true
+            },
+            {
+              "name": "portal",
+              "value": "",
+              "id": "b577775859f44eb9afeb9c31838d13f9",
+              "referenced": true,
+              "disabled": false,
+              "checked": false
+            },
+            {
+              "name": "kb_knowledge_base",
+              "value": "",
+              "id": "7504d4d4f171446e83ced2fbd32fa97a",
+              "referenced": true,
+              "disabled": false,
+              "checked": false
+            }
+          ],
+          "variableIds": [
+            "a377e53b410c4f3082354c2278c11b25",
+            "d593f67867b744b0b2efcd882c39cc29",
+            "b577775859f44eb9afeb9c31838d13f9",
+            "7504d4d4f171446e83ced2fbd32fa97a"
+          ]
+        },
+        "9b494cb08cea4028a97feb14186b366b": {
+          "id": "9b494cb08cea4028a97feb14186b366b",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "outputVariables": [
+            {
+              "key": "Results returned",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.results_returned}}",
+                        "displayValue": "vaVars➛results_returned"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "disabled": true,
+              "cannotBeDeleted": true,
+              "alertMessage": {
+                "id": "end.outputParamDeleteAlert",
+                "defaultMessage": "You cannot delete this parameter because other calling topics use it."
+              },
+              "additionalInfoUrl": "/sys_cs_topic_library_usage_list.do?sysparm_query=library_cs_topic_id=d9dec393b3973300dbbf6030c6a8dc27%5Ecalling_cs_topic_idIN09c7dd08b3a33300dbbf6030c6a8dc5b",
+              "additionalInfoLabel": {
+                "id": "end.outputParameterDeleteInfoLink",
+                "defaultMessage": "See calling topics"
+              }
+            },
+            {
+              "key": "Results Helpful",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.results_helpful}}",
+                        "displayValue": "vaVars➛results_helpful"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "disabled": true,
+              "cannotBeDeleted": true,
+              "alertMessage": {
+                "id": "end.outputParamDeleteAlert",
+                "defaultMessage": "You cannot delete this parameter because other calling topics use it."
+              },
+              "additionalInfoUrl": "/sys_cs_topic_library_usage_list.do?sysparm_query=library_cs_topic_id=d9dec393b3973300dbbf6030c6a8dc27%5Ecalling_cs_topic_idIN09c7dd08b3a33300dbbf6030c6a8dc5b",
+              "additionalInfoLabel": {
+                "id": "end.outputParameterDeleteInfoLink",
+                "defaultMessage": "See calling topics"
+              }
+            }
+          ]
+        },
+        "d86a60ef778843cd8a904e553bf79c01": {
+          "id": "d86a60ef778843cd8a904e553bf79c01",
+          "name": "Contextual Search",
+          "script": "(function execute() {\n    var contextualSearch = new global.VAGlobalContextualSearchUtil();\n    var response = contextualSearch.search(\n        vaInputs.context.getDisplayValue(), vaInputs.query, vaInputs.kb_knowledge_base\n    );\n    var success = contextualSearch.processSearchResponse(response);\n    if (!success) {\n        return;\n    }   \n    var relevantSearchResults = contextualSearch.processGeneralResults(response, vaVars.max_search_result_count, -2);\n    vaVars.searchResultCount = relevantSearchResults.length;\n    vaVars.search_result_json_string = JSON.stringify(relevantSearchResults);\n    vaVars.index = 0;\n    return;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "isOk": true
+        },
+        "16efd331f5fd423ebb779906c51b307f": {
+          "id": "16efd331f5fd423ebb779906c51b307f",
+          "stepType": "Decision",
+          "name": "Did the search return results?",
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          }
+        },
+        "e12e647f7bb643bea99ef1c9d8182b58": {
+          "id": "e12e647f7bb643bea99ef1c9d8182b58",
+          "stepType": "Prompt",
+          "name": "Did Articles Help",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "Did any of this information resolve your issue?"
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "optional": false,
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "entity": "",
+          "variableId": "cd9e9c20cc97419db5244296fa34d449",
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "d0ebd4265f804d8cb368c283d919287a": {
+          "id": "d0ebd4265f804d8cb368c283d919287a",
+          "name": "Record Outputs",
+          "script": "(function execute() {\n    if(vaInputs.did_articles_help == 'true') {\n        vaVars.results_helpful = true;\n    } else {\n        vaVars.results_helpful = false;\n    }\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "fc8a0cf4d2ed44f6bdb843e469b8a00d": {
+          "id": "fc8a0cf4d2ed44f6bdb843e469b8a00d",
+          "stepType": "LinkOutput",
+          "name": "Display multi-link",
+          "url": {
+            "mode": "simple",
+            "value": ""
+          },
+          "label": {
+            "mode": "simple",
+            "value": ""
+          },
+          "header": {
+            "mode": "simple",
+            "value": ""
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "linkType": "multiple",
+          "introMsg": {
+            "value": "(function execute() {\n    var index = parseInt(vaVars.index);\n    var count = parseInt(vaVars.searchResultCount);\n    var limit = parseInt(vaVars.limit)\n    var start = index + 1;\n    var end = (index + limit &lt; vaVars.searchResultCount) ? index + limit : vaVars.searchResultCount;\n    return gs.getMessage(\"Showing results {0} to {1} of {2}\", [start.toString(), end.toString(), vaVars.searchResultCount.toString()]);\n})()\n",
+            "mode": "script"
+          },
+          "listOfLinks": "(function execute(header) {\n\tvar variables = {\n\t\tlimit: vaVars.limit,\n\t\tindex: vaVars.index,\n\t\tsearch_result_json_string: vaVars.search_result_json_string,\n\t\tportal: vaInputs.portal\n\t}\n\tvar contextualSearch = new global.VAGlobalContextualSearchUtil();\n\tvar groupedLinksOutMsg = contextualSearch.getLinks(header, variables);\n\treturn groupedLinksOutMsg;\n})(header)\n"
+        },
+        "bdfa14efa8794ec097f9115e8c50e533": {
+          "stepType": "ReferenceChoicePrompt",
+          "name": "User Operation",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What would you like to do?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "mode": "query",
+            "value": ""
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "c8e4bfeab10b4e14a560e7b566ebb0fe",
+          "id": "bdfa14efa8794ec097f9115e8c50e533",
+          "mode": "external",
+          "script": "(function execute() {\n    var options = [];\n    var count = parseInt(vaVars.searchResultCount);\n    var index = parseInt(vaVars.index);\n    var limit = parseInt(vaVars.limit);\n    if (index + limit &lt; count) {\n        options.push({ \"value\": \"show_more\", \"label\": gs.getMessage(\"Show more\") })\n    }\n    if (index &gt; 0) {\n        options.push({ \"value\": \"show_prev\", \"label\": gs.getMessage(\"Show previous\") })\n    }\n    options.push({ \"value\": \"done\", \"label\": gs.getMessage(\"I'm done\") })\n    return options;\n})()",
+          "metadataScript": "",
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No Records Found"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "value": "(function execute() {\n    var options = [];\n    var count = parseInt(vaVars.searchResultCount);\n    var index = parseInt(vaVars.index);\n    var limit = parseInt(vaVars.limit);\n    if (index + limit &lt; count) {\n        options.push({ \"value\": \"show_more\", \"label\": gs.getMessage(\"Show more\") })\n    }\n    if (index &gt; 0) {\n        options.push({ \"value\": \"show_prev\", \"label\": gs.getMessage(\"Show previous\") })\n    }\n    options.push({ \"value\": \"done\", \"label\": gs.getMessage(\"I'm done\") })\n    return options;\n})()",
+            "mode": "external_script"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "49cc3d6863ba4914a8068127eac84e5b": {
+          "id": "49cc3d6863ba4914a8068127eac84e5b",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "c785057fb00542e18091c455aad66008": {
+          "id": "c785057fb00542e18091c455aad66008",
+          "name": "Show More",
+          "script": "(function execute() {\n    vaVars.index = parseInt(vaVars.index) + parseInt(vaVars.limit);\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "43197f274c634914afae5b919beb27b8": {
+          "id": "43197f274c634914afae5b919beb27b8",
+          "name": "Show Previous",
+          "script": "(function execute() {\n    vaVars.index = parseInt(vaVars.index) - parseInt(vaVars.limit);\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "1743607fca124e73b6d60b9a45468584": {
+          "id": "1743607fca124e73b6d60b9a45468584",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "52a7fe3eaee24028baad14b073167512": {
+          "id": "52a7fe3eaee24028baad14b073167512",
+          "stepType": "Prompt",
+          "name": "user_input2",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Type any key to move forward."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "8ac3a718b8f54eb0918a7a50933dbbf0",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "7f6ed292db9b498cb3f9b152ac8976f2",
+          "edgeType": "Edge",
+          "source": "52a7fe3eaee24028baad14b073167512",
+          "target": "d86a60ef778843cd8a904e553bf79c01",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "777dce3d21634d03a1ede4e7d976b558",
+          "edgeType": "Branch",
+          "source": "16efd331f5fd423ebb779906c51b307f",
+          "target": "fc8a0cf4d2ed44f6bdb843e469b8a00d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    if(vaVars.searchResultCount &gt; 0) {\n        vaVars.results_returned = true;\n        return true;\n    }\n    return false;\n})()\n"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "013b5dd130ee454baf3981f41af7e647",
+          "edgeType": "Branch",
+          "source": "16efd331f5fd423ebb779906c51b307f",
+          "target": "9b494cb08cea4028a97feb14186b366b",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    if (!(vaVars.searchResultCount &gt; 0)) {\n        vaVars.results_helpful = false;\n        vaVars.results_returned = false;\n        return true;\n    }\n    return false;\n\n})()\n"
+          },
+          "label": "No"
+        },
+        {
+          "id": "a199bd279d4444419e939bf422cd2b9a",
+          "edgeType": "Edge",
+          "source": "d86a60ef778843cd8a904e553bf79c01",
+          "target": "16efd331f5fd423ebb779906c51b307f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "59dfa79fc3994011ab4a1a9d087813ed",
+          "edgeType": "Edge",
+          "source": "e12e647f7bb643bea99ef1c9d8182b58",
+          "target": "d0ebd4265f804d8cb368c283d919287a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "34a4651586a24e4c876e454fb35c1e3b",
+          "edgeType": "Edge",
+          "source": "d0ebd4265f804d8cb368c283d919287a",
+          "target": "9b494cb08cea4028a97feb14186b366b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3bc2abc1ad7642239fb9bf59331a7478",
+          "edgeType": "Edge",
+          "source": "bdfa14efa8794ec097f9115e8c50e533",
+          "target": "49cc3d6863ba4914a8068127eac84e5b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "40b5ea1e1bab43c393871f3f6a65d25f",
+          "edgeType": "Branch",
+          "source": "49cc3d6863ba4914a8068127eac84e5b",
+          "target": "e12e647f7bb643bea99ef1c9d8182b58",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaInputs.user_operation.getValue() == 'done';\n})()\n"
+          },
+          "label": "I'm Done"
+        },
+        {
+          "id": "6c64b7441ca14a47a32697eaa5b40302",
+          "edgeType": "Branch",
+          "source": "49cc3d6863ba4914a8068127eac84e5b",
+          "target": "c785057fb00542e18091c455aad66008",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaInputs.user_operation.getValue() == 'show_more';\n})()\n"
+          },
+          "label": "Show More"
+        },
+        {
+          "id": "4ad5f062875944e28623f4f7fa22b43a",
+          "edgeType": "Edge",
+          "source": "c785057fb00542e18091c455aad66008",
+          "target": "fc8a0cf4d2ed44f6bdb843e469b8a00d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "70a08757d5a346f98032fb9472b2d20f",
+          "edgeType": "Branch",
+          "source": "49cc3d6863ba4914a8068127eac84e5b",
+          "target": "43197f274c634914afae5b919beb27b8",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    return vaInputs.user_operation.getValue() == 'show_prev';\n})()\n"
+          },
+          "label": "Show Previous"
+        },
+        {
+          "id": "c3b9881cc1fb41c6b6e7b2a7d971b9cc",
+          "edgeType": "Edge",
+          "source": "43197f274c634914afae5b919beb27b8",
+          "target": "fc8a0cf4d2ed44f6bdb843e469b8a00d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f94d8b6fd6b34b1fb94f1c6326f26dc9",
+          "edgeType": "Edge",
+          "source": "fc8a0cf4d2ed44f6bdb843e469b8a00d",
+          "target": "1743607fca124e73b6d60b9a45468584",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "88b0f91299e9465f8fe2cf21cb751f24",
+          "edgeType": "Branch",
+          "source": "1743607fca124e73b6d60b9a45468584",
+          "target": "bdfa14efa8794ec097f9115e8c50e533",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    var count = parseInt(vaVars.searchResultCount);\n    var limit = parseInt(vaVars.limit);\n    return count &gt; limit;\n})()\n"
+          },
+          "label": "count &gt; limit"
+        },
+        {
+          "id": "762b002460444ca59865f08fad96f440",
+          "edgeType": "Branch",
+          "source": "1743607fca124e73b6d60b9a45468584",
+          "target": "e12e647f7bb643bea99ef1c9d8182b58",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    var count = parseInt(vaVars.searchResultCount);\n    var limit = parseInt(vaVars.limit);\n    return count &lt;= limit;\n})()\n"
+          },
+          "label": "count &lt;= limit"
+        },
+        {
+          "id": "b573c4eeb0bd4e628baa29b549d038ff",
+          "edgeType": "Edge",
+          "source": "702a2771e02a4afd9549752471595c95",
+          "target": "52a7fe3eaee24028baad14b073167512",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "5e6f548e1fc541538f61f890e768a040": {
+      "id": "5e6f548e1fc541538f61f890e768a040",
+      "name": "search_result_json_string",
+      "label": "search_result_json_string",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "f634d129bbec4e1b8ed275621afac8d7": {
+      "id": "f634d129bbec4e1b8ed275621afac8d7",
+      "name": "index",
+      "label": "index",
+      "varType": "script",
+      "value": "0",
+      "category": "vaVars"
+    },
+    "9573b319664240d8909adff7e0be169f": {
+      "id": "9573b319664240d8909adff7e0be169f",
+      "value": {
+        "mode": "simple",
+        "value": "1"
+      },
+      "name": "limit",
+      "label": "limit",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e6bcd4217df24a638b76d7486e6ecbb2": {
+      "id": "e6bcd4217df24a638b76d7486e6ecbb2",
+      "value": {
+        "mode": "simple",
+        "value": "2821675a5b30130070e4492c11f91a89"
+      },
+      "name": "search_context_sys_id",
+      "label": "search_context_sys_id",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "e1e9ab290bf64bdea03cf892abf31d42": {
+      "id": "e1e9ab290bf64bdea03cf892abf31d42",
+      "value": {
+        "mode": "simple",
+        "value": "0"
+      },
+      "name": "searchResultCount",
+      "label": "searchResultCount",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "a377e53b410c4f3082354c2278c11b25": {
+      "id": "a377e53b410c4f3082354c2278c11b25",
+      "name": "context",
+      "label": "Context",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      }
+    },
+    "cd9e9c20cc97419db5244296fa34d449": {
+      "id": "cd9e9c20cc97419db5244296fa34d449",
+      "name": "did_articles_help",
+      "label": "Did Articles Help",
+      "varType": "boolean",
+      "category": "vaInputs"
+    },
+    "d2b0ff6e85c24c2ea0da999b7d6f48d8": {
+      "id": "d2b0ff6e85c24c2ea0da999b7d6f48d8",
+      "value": {
+        "mode": "simple",
+        "value": "false"
+      },
+      "name": "results_returned",
+      "label": "results_returned",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "fd167b4181314484a5c5eaeb6f516e6b": {
+      "id": "fd167b4181314484a5c5eaeb6f516e6b",
+      "value": {
+        "mode": "simple",
+        "value": "false"
+      },
+      "name": "results_helpful",
+      "label": "results_helpful",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "d593f67867b744b0b2efcd882c39cc29": {
+      "id": "d593f67867b744b0b2efcd882c39cc29",
+      "name": "query",
+      "label": "Query",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      }
+    },
+    "ba19a8f97d204b188c43850bf2ecfc0d": {
+      "id": "ba19a8f97d204b188c43850bf2ecfc0d",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "DEBUG_JSON_RESULT",
+      "label": "DEBUG_JSON_RESULT",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "b577775859f44eb9afeb9c31838d13f9": {
+      "id": "b577775859f44eb9afeb9c31838d13f9",
+      "name": "portal",
+      "label": "Portal",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      }
+    },
+    "7504d4d4f171446e83ced2fbd32fa97a": {
+      "id": "7504d4d4f171446e83ced2fbd32fa97a",
+      "name": "kb_knowledge_base",
+      "label": "Kb_knowledge_base",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      }
+    },
+    "563e3fac505e4bc480eb487a46238d84": {
+      "category": "vaInputs",
+      "id": "563e3fac505e4bc480eb487a46238d84",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "c8e4bfeab10b4e14a560e7b566ebb0fe": {
+      "id": "c8e4bfeab10b4e14a560e7b566ebb0fe",
+      "name": "user_operation",
+      "label": "User Operation",
+      "varType": "reference",
+      "table": "",
+      "category": "vaInputs"
+    },
+    "5315b1883cba4faea9666c2005fbabbd": {
+      "id": "5315b1883cba4faea9666c2005fbabbd",
+      "value": {
+        "mode": "simple",
+        "value": "3"
+      },
+      "name": "max_search_result_count",
+      "label": "max_search_result_count",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "8ac3a718b8f54eb0918a7a50933dbbf0": {
+      "id": "8ac3a718b8f54eb0918a7a50933dbbf0",
+      "name": "user_input2",
+      "label": "User_input2",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTYyMzA3OTk0ODMwNiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    }
+  }
+}</graph>
+        <key_phrases/>
+        <library>true</library>
+        <live_agent>false</live_agent>
+        <name>Covid-19 Bot</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <roles/>
+        <source_topic_id>d7584f5fb3573300dbbf6030c6a8dc5c</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-07 13:56:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>86c83f122fa4701061ad811df699b678</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Covid-19 Bot</sys_name>
+        <sys_package display_value="Covid-19 Infections and Vaccination Tracker" source="x_563969_covid_19">461189642f20301061ad811df699b61c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Covid-19 Infections and Vaccination Tracker">461189642f20301061ad811df699b61c</sys_scope>
+        <sys_update_name>sys_cb_topic_86c83f122fa4701061ad811df699b678</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-07 15:41:22</sys_updated_on>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>TOPIC_BLOCK</type>
+        <variables/>
+    </sys_cb_topic>
+    <sys_variable_value action="delete_multiple" query="document_key=86c83f122fa4701061ad811df699b678"/>
+</record_update>
